@@ -1799,8 +1799,10 @@ CREATE TABLE IF NOT EXISTS `tbl_historial_servicio` (
 
 
 -- Tablas Pasaporte
+-- Shelly y Angel
 CREATE TABLE IF NOT EXISTS Tbl_Ciudadanos (
   Pk_Id_cuidadano INT(11) NOT NULL AUTO_INCREMENT,
+  Ciudadano_DPI INT(11) NOT NULL,
   Cuidadano_nombres VARCHAR(50) NOT NULL,
   Cuidadano_apellidos VARCHAR(50) NOT NULL,
   Cuidadano_fecha_nac DATE NOT NULL,
@@ -1809,7 +1811,7 @@ CREATE TABLE IF NOT EXISTS Tbl_Ciudadanos (
   Cuidadano_dire VARCHAR(50) NOT NULL,
   Cuidadano_telefono TINYINT(10) NOT NULL,
   Cuidadano_genero VARCHAR(50) NOT NULL,
-  Cuidadano_estado TINYINT(4) NOT NULL,
+  estado TINYINT(4) NOT NULL,
   PRIMARY KEY (Pk_Id_cuidadano)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1821,8 +1823,41 @@ CREATE TABLE IF NOT EXISTS Tbl_AgendarCita (
   Cita_fecha DATETIME NOT NULL,
   -- Cita_hora DATE NOT NULL,
   Cita_tipo_tramite VARCHAR(50) NOT NULL, -- reprogramacion o agendar por primera vez
-  Cuidadano_estado TINYINT(4) NOT NULL,
+  estado TINYINT(4) NOT NULL,
   PRIMARY KEY ( Pk_Id_cita)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Crear la tabla Documentacion
+-- Emerzon y Josue
+CREATE TABLE IF NOT EXISTS Documentacion (
+    PK_id_doc INT(11) NOT NULL AUTO_INCREMENT,
+    FK_id_ciudadano INT(11) NOT NULL,
+    Doc_Form_solicitud VARCHAR(50),
+    Doc_DPI_certificado VARCHAR(50),
+    Doc_Pasaporte_vencido VARCHAR(50),
+    Doc_Boleta_pago VARCHAR(50),
+    Doc_DPI_padre VARCHAR(50),
+    Doc_DPI_madre VARCHAR(50),
+    estado TINYINT(4) NOT NULL,
+    Fecha_present DATE NOT NULL,
+    PRIMARY KEY (PK_id_doc),
+    FOREIGN KEY (FK_id_ciudadano) REFERENCES Tbl_Ciudadanos(PK_Id_cuidadano)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Crear la tabla Tramite_Pasaporte
+CREATE TABLE IF NOT EXISTS Tramite_Pasaporte (
+    PK_id_tramite INT(11) NOT NULL AUTO_INCREMENT,
+    FK_id_ciudadano INT(11) NOT NULL,
+    FK_id_cita INT(11) NOT NULL,
+    Estado_tramite TINYINT(4) NOT NULL,
+    Tipo_tramite VARCHAR(50) NOT NULL,
+    Fecha_inicio_tramite DATE NOT NULL,
+    Fecha_fin_tramite DATE,
+    estado TINYINT(4) NOT NULL,
+    PRIMARY KEY (PK_Id_tramite),
+    FOREIGN KEY (FK_Id_ciudadano) REFERENCES Tbl_Ciudadanos(PK_Id_cuidadano),
+    FOREIGN KEY (FK_Id_cita) REFERENCES Tbl_AgendarCita(PK_Id_cita)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 
 
