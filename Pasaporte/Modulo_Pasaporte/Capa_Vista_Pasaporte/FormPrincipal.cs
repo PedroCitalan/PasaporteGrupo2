@@ -9,15 +9,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Vista_Pasaporte;
+using Capa_Vista_CDE;
 
-namespace Interfac_V3   
+namespace Capa_Vista_Pasaporte   
 {
     public partial class FormPrincipal : Form
     {
-        public FormPrincipal()
+        public FormPrincipal(string idUsuario)
         {
             InitializeComponent();
             ocultaSubMenu();
+
         }
         private void ocultaSubMenu() 
         {
@@ -162,14 +164,13 @@ namespace Interfac_V3
         private void btnMenuProcesos_Click(object sender, EventArgs e)
         {
             muestraSubMenu(panelMenuProcesos);
+
+
+
+
         }
 
-        private void btnMenuCatalogosOpcion2_Click_1(object sender, EventArgs e)
-        {
-            //AbrirFormulario<Form2>();
-            //btnMenuCatalogosOpcion2.BackColor = Color.FromArgb(12, 61, 92);
-           //ocultaSubMenu();
-        }
+       
 
         private void btnMenuProcesosOpcion1_Click(object sender, EventArgs e)
         {
@@ -178,9 +179,21 @@ namespace Interfac_V3
             ocultaSubMenu();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<CentroDeEmision>();
+
+            ocultaSubMenu();
+
+
+
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
+
         }
         #endregion
         //Metodo para abrir formularios dentro de panel contenedor
