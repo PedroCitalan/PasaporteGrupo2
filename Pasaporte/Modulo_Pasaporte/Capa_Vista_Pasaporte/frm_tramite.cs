@@ -19,6 +19,7 @@ namespace Capa_Vista_Pasaporte
         public frm_tramite()
         {
             InitializeComponent();
+
         }
 
         private void frm_tramite_Load(object sender, EventArgs e)

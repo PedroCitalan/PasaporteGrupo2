@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Capa_Vista_CDE">
+      <HintPath>..\..\IS-CentroDeEmision\MVC_CentroDeEmision\Capa_Vista_CDE\bin\Debug\Capa_Vista_CDE.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
