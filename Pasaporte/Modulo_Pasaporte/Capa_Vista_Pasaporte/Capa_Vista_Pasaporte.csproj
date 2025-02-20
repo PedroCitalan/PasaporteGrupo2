@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CapaVistaPagos">
+      <HintPath>..\..\FormularioDePagos\CapaVistaPagos\bin\Debug\CapaVistaPagos.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_CDE">
       <HintPath>..\..\IS-CentroDeEmision\MVC_CentroDeEmision\Capa_Vista_CDE\bin\Debug\Capa_Vista_CDE.dll</HintPath>
     </Reference>
