@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Capa_Vista_Pasaporte;
 using Capa_Vista_CDE;
 using Capa_Vista_Sol;
+using CapaVistaPagos;
 
 namespace Capa_Vista_Pasaporte   
 {
@@ -207,6 +208,13 @@ namespace Capa_Vista_Pasaporte
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Documento_de_identificación>();
+
+            ocultaSubMenu();
+        }
+
+        private void btnMenuProcesosOpcion5_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Pagos>();
 
             ocultaSubMenu();
         }
