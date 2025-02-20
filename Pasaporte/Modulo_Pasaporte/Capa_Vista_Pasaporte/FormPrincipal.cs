@@ -22,13 +22,16 @@ namespace Capa_Vista_Pasaporte
             InitializeComponent();
             ocultaSubMenu();
 
+
         }
         private void ocultaSubMenu() 
         {
             if (panelMenuCatalogos.Visible == true)
                 panelMenuCatalogos.Visible = false;
+
             if (panelMenuProcesos.Visible == true)
                 panelMenuProcesos.Visible = false;
+
         }
         private void muestraSubMenu(Panel subMenu)
         {
@@ -157,38 +160,17 @@ namespace Capa_Vista_Pasaporte
             AbrirFormulario<Ciudadano>();
             ocultaSubMenu();
         }
-        private void btnMenuCatalogosOpcion2_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+    
         private void btnMenuProcesos_Click(object sender, EventArgs e)
         {
             muestraSubMenu(panelMenuProcesos);
 
-
-
-
         }
-
-       
 
         private void btnMenuProcesosOpcion1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frm_tramite>();
-      
-            ocultaSubMenu();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            AbrirFormulario<CentroDeEmision>();
-
-            ocultaSubMenu();
-
-
-
-
+        
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -197,24 +179,58 @@ namespace Capa_Vista_Pasaporte
 
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            AbrirFormulario<CentroDeEmision>();
+
+           
+
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Solicitante>();
 
-            ocultaSubMenu();
+         
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
+
             AbrirFormulario<Documento_de_identificación>();
 
-            ocultaSubMenu();
+          
         }
 
-        private void btnMenuProcesosOpcion5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Pagos>();
 
+            
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Pago>();
+            ocultaSubMenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Doc>();
+            ocultaSubMenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<UsuarioOfi>();
+            ocultaSubMenu();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Oficinas>();
             ocultaSubMenu();
         }
         #endregion
