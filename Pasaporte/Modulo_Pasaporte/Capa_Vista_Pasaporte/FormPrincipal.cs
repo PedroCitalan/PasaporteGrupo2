@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Vista_Pasaporte;
 using Capa_Vista_CDE;
+using Capa_Vista_Sol;
 
 namespace Capa_Vista_Pasaporte   
 {
@@ -194,6 +195,20 @@ namespace Capa_Vista_Pasaporte
         {
             this.Close();
 
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Solicitante>();
+
+            ocultaSubMenu();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Documento_de_identificación>();
+
+            ocultaSubMenu();
         }
         #endregion
         //Metodo para abrir formularios dentro de panel contenedor
