@@ -37,8 +37,15 @@
     <Reference Include="Capa_Vista_CDE">
       <HintPath>..\..\IS-CentroDeEmision\MVC_CentroDeEmision\Capa_Vista_CDE\bin\Debug\Capa_Vista_CDE.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Vista_Navegador, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Navegador\Capa_Vista_Navegador\bin\Debug\Capa_Vista_Navegador.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_Sol">
       <HintPath>..\..\MVC_Solicitante_Ammy_pedro\MVC_Solicitante\Capa_Vista_Sol\bin\Debug\Capa_Vista_Sol.dll</HintPath>
+    </Reference>
+    <Reference Include="Interfac_V3">
+      <HintPath>..\..\..\Menus\ModernGUI_V3\bin\Debug\Interfac_V3.exe</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -52,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ciudadano.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ciudadano.Designer.cs">
+      <DependentUpon>Ciudadano.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +85,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Ciudadano.resx">
+      <DependentUpon>Ciudadano.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
     </EmbeddedResource>

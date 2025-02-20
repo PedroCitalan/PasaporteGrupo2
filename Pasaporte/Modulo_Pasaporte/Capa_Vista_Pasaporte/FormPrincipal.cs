@@ -154,9 +154,8 @@ namespace Capa_Vista_Pasaporte
 
         private void btnMenuCatalogosOpcion1_Click(object sender, EventArgs e)
         {
-            //AbrirFormulario<Form1>();
-            //btnMenuCatalogosOpcion1.BackColor = Color.FromArgb(12, 61, 92);
-            //ocultaSubMenu();
+            AbrirFormulario<Ciudadano>();
+            ocultaSubMenu();
         }
         private void btnMenuCatalogosOpcion2_Click(object sender, EventArgs e)
         {

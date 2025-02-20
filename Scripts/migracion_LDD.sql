@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS Tbl_Pago (
   Pago_fecha DATE NOT NULL,
   Pago_cantidad TINYINT(10) NOT NULL,
   estado TINYINT(4) NOT NULL,
-  PRIMARY KEY (Pk_Id_cuidadano)
+  PRIMARY KEY (Pk_Id_pago)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE IF NOT EXISTS Tbl_AgendarCita (
@@ -246,8 +246,8 @@ CREATE TABLE IF NOT EXISTS Tbl_Historial_Tramites (
     Fecha_Cambio DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     Usuario_Responsable INT(11) NOT NULL,
     PRIMARY KEY (Pk_Id_Historial),
-    FOREIGN KEY (Fk_Id_Tramite) REFERENCES Tramite_Pasaporte(PK_Id_tramite),
-    FOREIGN KEY (Usuario_Responsable) REFERENCES Tbl_Usuarios(Pk_Id_Usuario)
+    FOREIGN KEY (Fk_Id_Tramite) REFERENCES Tramite_Pasaporte(PK_id_tramite),
+    FOREIGN KEY (Usuario_Responsable) REFERENCES Tbl_UsuariosOficina(Pk_Id_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE IF NOT EXISTS Tbl_Multas (
@@ -269,8 +269,8 @@ CREATE TABLE IF NOT EXISTS Tbl_Entrega_Pasaporte (
     Firma_Recibido VARCHAR(255),
     estado TINYINT(4) NOT NULL DEFAULT 1,
     PRIMARY KEY (Pk_Id_Entrega),
-    FOREIGN KEY (Fk_Id_Tramite) REFERENCES Tramite_Pasaporte(PK_Id_tramite),
-    FOREIGN KEY (Usuario_Entrega) REFERENCES Tbl_Usuarios(Pk_Id_Usuario)
+    FOREIGN KEY (Fk_Id_Tramite) REFERENCES Tramite_Pasaporte(PK_id_tramite),
+    FOREIGN KEY (Usuario_Entrega) REFERENCES Tbl_UsuariosOficina(Pk_Id_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
