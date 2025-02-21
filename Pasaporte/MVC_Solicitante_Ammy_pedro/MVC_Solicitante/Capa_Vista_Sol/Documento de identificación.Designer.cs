@@ -43,7 +43,7 @@ namespace Capa_Vista_Sol
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(615, 307);
+            this.button5.Location = new System.Drawing.Point(694, 356);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(156, 84);
             this.button5.TabIndex = 5;
@@ -54,7 +54,7 @@ namespace Capa_Vista_Sol
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Haettenschweiler", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(93, 31);
+            this.lblTitulo.Location = new System.Drawing.Point(135, 37);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(598, 62);
             this.lblTitulo.TabIndex = 213;
@@ -63,28 +63,28 @@ namespace Capa_Vista_Sol
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(348, 327);
+            this.textBox4.Location = new System.Drawing.Point(471, 311);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(218, 22);
             this.textBox4.TabIndex = 231;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(364, 257);
+            this.textBox3.Location = new System.Drawing.Point(471, 259);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(218, 22);
             this.textBox3.TabIndex = 230;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(376, 196);
+            this.textBox2.Location = new System.Drawing.Point(471, 211);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(218, 22);
             this.textBox2.TabIndex = 229;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(364, 134);
+            this.textBox1.Location = new System.Drawing.Point(471, 161);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 22);
             this.textBox1.TabIndex = 228;
@@ -93,7 +93,7 @@ namespace Capa_Vista_Sol
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(56, 259);
+            this.label3.Location = new System.Drawing.Point(80, 261);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(286, 20);
             this.label3.TabIndex = 227;
@@ -103,7 +103,7 @@ namespace Capa_Vista_Sol
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 134);
+            this.label2.Location = new System.Drawing.Point(80, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(316, 20);
             this.label2.TabIndex = 226;
@@ -113,7 +113,7 @@ namespace Capa_Vista_Sol
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 198);
+            this.label1.Location = new System.Drawing.Point(80, 213);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(344, 20);
             this.label1.TabIndex = 225;
@@ -123,7 +123,7 @@ namespace Capa_Vista_Sol
             // 
             this.Lbl_Nombre.AutoSize = true;
             this.Lbl_Nombre.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Lbl_Nombre.Location = new System.Drawing.Point(37, 338);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(80, 313);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
             this.Lbl_Nombre.Size = new System.Drawing.Size(284, 20);
             this.Lbl_Nombre.TabIndex = 224;
@@ -133,7 +133,7 @@ namespace Capa_Vista_Sol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(218)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(883, 463);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
