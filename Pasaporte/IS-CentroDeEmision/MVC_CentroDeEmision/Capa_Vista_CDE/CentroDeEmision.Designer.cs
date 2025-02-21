@@ -506,6 +506,7 @@ namespace Capa_Vista_CDE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(221)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(913, 739);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -514,6 +515,7 @@ namespace Capa_Vista_CDE
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CentroDeEmision";
             this.Text = "CentroDeEmision";
             this.groupBox1.ResumeLayout(false);
