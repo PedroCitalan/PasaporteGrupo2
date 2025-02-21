@@ -80,6 +80,9 @@
     <Reference Include="Capa_Vista_Banco">
       <HintPath>..\..\Bancos\Bancos\Capa_Vista_Banco\bin\Debug\Capa_Vista_Banco.dll</HintPath>
     </Reference>
+    <Reference Include="Capa_Vista_Reporteria">
+      <HintPath>..\..\Reporteador\Capa_Vista_Reporteria\bin\Debug\Capa_Vista_Reporteria.dll</HintPath>
+    </Reference>
     <Reference Include="Capa_Vista_Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Seguridad\Capa_Vista_Seguridad\bin\Debug\Capa_Vista_Seguridad.dll</HintPath>
