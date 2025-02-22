@@ -1861,7 +1861,7 @@ CREATE TABLE IF NOT EXISTS Documentacion (
 CREATE TABLE IF NOT EXISTS Doc_Identificacion (
     PK_id_di INT(11) NOT NULL AUTO_INCREMENT,
     Doc_Tipo VARCHAR(50),
-    Doc_nodi TINYINT(4) NOT NULL,
+    Doc_No_di INT NOT NULL,
     Doc_Fecha_emision DATE NOT NULL,
     Doc_lugar_emision VARCHAR(50),
     estado TINYINT(4) NOT NULL,
@@ -1887,7 +1887,7 @@ CREATE TABLE IF NOT EXISTS Tbl_UsuariosOficina (
     Usuario_Apellido VARCHAR(50) NOT NULL,
     Usuario_Email VARCHAR(100) NOT NULL UNIQUE,
     Usuario_Contraseña VARCHAR(255) NOT NULL,
-    Usuario_Rol ENUM('Administrador', 'Empleado', 'Cajero') NOT NULL,
+    Usuario_Rol varchar(50) NOT NULL,
     estado TINYINT(4) NOT NULL DEFAULT 1,
     PRIMARY KEY (Pk_Id_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
