@@ -74,6 +74,7 @@ namespace Capa_Vista_CDE
             this.label17 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -97,7 +98,7 @@ namespace Capa_Vista_CDE
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(21, 34);
+            this.groupBox1.Location = new System.Drawing.Point(21, 84);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(208, 295);
             this.groupBox1.TabIndex = 0;
@@ -236,7 +237,7 @@ namespace Capa_Vista_CDE
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Location = new System.Drawing.Point(431, 34);
+            this.groupBox2.Location = new System.Drawing.Point(431, 84);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(267, 295);
             this.groupBox2.TabIndex = 1;
@@ -254,11 +255,12 @@ namespace Capa_Vista_CDE
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(137, 232);
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(131, 232);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 37);
+            this.button5.Size = new System.Drawing.Size(120, 37);
             this.button5.TabIndex = 6;
-            this.button5.Text = "Cargar Firma";
+            this.button5.Text = "Cargar Firma.";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
@@ -333,7 +335,7 @@ namespace Capa_Vista_CDE
             this.groupBox3.Controls.Add(this.checkBox3);
             this.groupBox3.Controls.Add(this.checkBox2);
             this.groupBox3.Controls.Add(this.checkBox1);
-            this.groupBox3.Location = new System.Drawing.Point(21, 335);
+            this.groupBox3.Location = new System.Drawing.Point(21, 395);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(677, 87);
             this.groupBox3.TabIndex = 2;
@@ -362,7 +364,7 @@ namespace Capa_Vista_CDE
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(246, 30);
+            this.checkBox2.Location = new System.Drawing.Point(244, 44);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(139, 21);
             this.checkBox2.TabIndex = 4;
@@ -382,18 +384,18 @@ namespace Capa_Vista_CDE
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 428);
+            this.dataGridView1.Location = new System.Drawing.Point(21, 496);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(872, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(880, 299);
             this.dataGridView1.TabIndex = 3;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(704, 38);
+            this.pictureBox1.Location = new System.Drawing.Point(704, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -407,9 +409,9 @@ namespace Capa_Vista_CDE
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.button1);
-            this.groupBox4.Location = new System.Drawing.Point(704, 302);
+            this.groupBox4.Location = new System.Drawing.Point(704, 362);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(189, 120);
+            this.groupBox4.Size = new System.Drawing.Size(197, 120);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
             // 
@@ -425,15 +427,17 @@ namespace Capa_Vista_CDE
             // 
             // button4
             // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.Location = new System.Drawing.Point(96, 69);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 35);
+            this.button4.Size = new System.Drawing.Size(93, 35);
             this.button4.TabIndex = 3;
             this.button4.Text = "Buscar";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(6, 69);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 35);
@@ -443,15 +447,17 @@ namespace Capa_Vista_CDE
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(96, 28);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 35);
+            this.button2.Size = new System.Drawing.Size(93, 35);
             this.button2.TabIndex = 1;
             this.button2.Text = "Actualizar";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(6, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 35);
@@ -470,7 +476,7 @@ namespace Capa_Vista_CDE
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.label5);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Location = new System.Drawing.Point(235, 34);
+            this.groupBox5.Location = new System.Drawing.Point(235, 84);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(190, 295);
             this.groupBox5.TabIndex = 10;
@@ -502,12 +508,23 @@ namespace Capa_Vista_CDE
             this.label9.TabIndex = 0;
             this.label9.Text = "Número De Solicitud";
             // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Haettenschweiler", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(325, 9);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(310, 50);
+            this.label18.TabIndex = 11;
+            this.label18.Text = "Centro De Emisión.";
+            // 
             // CentroDeEmision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(221)))), ((int)(((byte)(230)))));
-            this.ClientSize = new System.Drawing.Size(913, 739);
+            this.ClientSize = new System.Drawing.Size(913, 807);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.pictureBox1);
@@ -532,6 +549,7 @@ namespace Capa_Vista_CDE
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -581,5 +599,6 @@ namespace Capa_Vista_CDE
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
     }
 }

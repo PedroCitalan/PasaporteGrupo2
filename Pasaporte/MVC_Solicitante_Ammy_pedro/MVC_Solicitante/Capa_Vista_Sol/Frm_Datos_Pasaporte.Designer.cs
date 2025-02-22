@@ -57,7 +57,7 @@ namespace Capa_Vista_Sol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.RoyalBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(218)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.button5);
