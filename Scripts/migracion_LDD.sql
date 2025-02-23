@@ -128,8 +128,7 @@ DELIMITER ;
 
 -- --------------------------------------------------------
 
--- Tablas Pasaporte
--- Shelly y Angel
+-- Inicio tablas maestras
 CREATE TABLE IF NOT EXISTS Tbl_Ciudadanos (
   Pk_Id_cuidadano INT(11) NOT NULL AUTO_INCREMENT,
   -- Ciudadano_DPI INT(11) NOT NULL,
@@ -144,8 +143,8 @@ CREATE TABLE IF NOT EXISTS Tbl_Ciudadanos (
   Cuidadano_genero VARCHAR(50) NOT NULL,
   Ciudadano_nacionalidad VARCHAR(60) NOT NULL,
   Ciudadano_lugar_nac VARCHAR(60) NOT NULL,
-  Cuidadano_telefono TINYINT(10) NOT NULL,
-  Cuidadano_no_registro TINYINT(15) NOT NULL,
+  Cuidadano_telefono INT(10) NOT NULL,
+  Cuidadano_no_registro INT(15) NOT NULL,
   estado TINYINT(4) NOT NULL,
   PRIMARY KEY (Pk_Id_cuidadano)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -161,47 +160,16 @@ CREATE TABLE IF NOT EXISTS Tbl_Pago (
   PRIMARY KEY (Pk_Id_pago)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-CREATE TABLE IF NOT EXISTS Tbl_AgendarCita (
-  Pk_Id_cita INT(11) NOT NULL AUTO_INCREMENT,
-  Fk_id_pago INT(11) NOT NULL,
-  Cita_correlativo_pago TINYINT(10) NOT NULL,
-  Cita_No_cgc TINYINT(10) NOT NULL,
-  Cita_fecha DATETIME NOT NULL,
-  -- Cita_hora DATE NOT NULL,
-  Cita_tipo_tramite VARCHAR(50) NOT NULL, -- reprogramacion o agendar por primera vez
-  estado TINYINT(4) NOT NULL,
-  PRIMARY KEY ( Pk_Id_cita)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Crear la tabla Documentacion
--- Emerzon y Josue
-CREATE TABLE IF NOT EXISTS Documentacion (
-    PK_id_doc INT(11) NOT NULL AUTO_INCREMENT,
-    FK_id_ciudadano INT(11) NOT NULL,
-    Doc_Form_solicitud VARCHAR(50),
-    Doc_DPI_certificado VARCHAR(50),
-    Doc_Pasaporte_vencido VARCHAR(50),
-    Doc_Boleta_pago VARCHAR(50),
-    Doc_DPI_padre VARCHAR(50),
-    Doc_DPI_madre VARCHAR(50),
-    estado TINYINT(4) NOT NULL,
-    Fecha_present DATE NOT NULL,
-    PRIMARY KEY (PK_id_doc),
-    FOREIGN KEY (FK_id_ciudadano) REFERENCES Tbl_Ciudadanos(PK_Id_cuidadano)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
 CREATE TABLE IF NOT EXISTS Doc_Identificacion (
     PK_id_di INT(11) NOT NULL AUTO_INCREMENT,
     Doc_Tipo VARCHAR(50),
-    Doc_nodi TINYINT(4) NOT NULL,
+    Doc_No_di INT NOT NULL,
     Doc_Fecha_emision DATE NOT NULL,
     Doc_lugar_emision VARCHAR(50),
     estado TINYINT(4) NOT NULL,
     PRIMARY KEY (PK_id_di)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-
--- Angel Y Shelly
 
 CREATE TABLE IF NOT EXISTS Tbl_Oficinas (
     Pk_Id_Oficina INT(11) NOT NULL AUTO_INCREMENT,
@@ -219,11 +187,28 @@ CREATE TABLE IF NOT EXISTS Tbl_UsuariosOficina (
     Usuario_Apellido VARCHAR(50) NOT NULL,
     Usuario_Email VARCHAR(100) NOT NULL UNIQUE,
     Usuario_Contraseña VARCHAR(255) NOT NULL,
-    Usuario_Rol ENUM('Administrador', 'Empleado', 'Cajero') NOT NULL,
+    Usuario_Rol varchar(50) NOT NULL,
     estado TINYINT(4) NOT NULL DEFAULT 1,
     PRIMARY KEY (Pk_Id_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+-- Fin tablas maestras
 
+CREATE TABLE IF NOT EXISTS Tbl_AgendarCita (
+  Pk_Id_cita INT(11) NOT NULL AUTO_INCREMENT,
+  Fk_id_pago INT(11) NOT NULL,
+  Fk_id_oficina INT(11) NOT NULL,
+  Cita_correlativo_pago TINYINT(10) NOT NULL,
+  Cita_No_cgc TINYINT(10) NOT NULL,
+  Cita_fecha DATETIME NOT NULL,
+  -- Cita_hora DATE NOT NULL,
+  Cita_tipo_tramite VARCHAR(50) NOT NULL, -- reprogramacion o agendar por primera vez
+  estado TINYINT(4) NOT NULL,
+  PRIMARY KEY ( Pk_Id_cita),
+  FOREIGN KEY (Fk_id_pago) REFERENCES Tbl_Pago(Pk_Id_pago),
+  FOREIGN KEY (Fk_id_oficina) REFERENCES Tbl_Oficinas(Pk_Id_Oficina)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Emerzon y Josue
 -- Crear la tabla Tramite_Pasaporte
 CREATE TABLE IF NOT EXISTS Tramite_Pasaporte (
     PK_id_tramite INT(11) NOT NULL AUTO_INCREMENT,
@@ -238,6 +223,25 @@ CREATE TABLE IF NOT EXISTS Tramite_Pasaporte (
     FOREIGN KEY (FK_Id_cita) REFERENCES Tbl_AgendarCita(PK_Id_cita)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Crear la tabla Documentacion
+CREATE TABLE IF NOT EXISTS Documentacion (
+    PK_id_doc INT(11) NOT NULL AUTO_INCREMENT,
+    FK_id_ciudadano INT(11) NOT NULL,
+    Fk_id_di INT(11) NOT NULL,
+    Doc_DPI_certificado VARCHAR(50),
+    Doc_Form_solicitud VARCHAR(50),
+    Doc_Pasaporte_vencido VARCHAR(50),
+    Doc_Boleta_pago VARCHAR(50),
+    Doc_DPI_padre VARCHAR(50),
+    Doc_DPI_madre VARCHAR(50),
+    estado TINYINT(4) NOT NULL,
+    Fecha_present DATE NOT NULL,
+    PRIMARY KEY (PK_id_doc),
+    FOREIGN KEY (FK_id_ciudadano) REFERENCES Tbl_Ciudadanos(PK_Id_cuidadano),
+    FOREIGN KEY (Fk_id_di) REFERENCES Doc_Identificacion(Pk_id_di) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Angel Y Shelly
 CREATE TABLE IF NOT EXISTS Tbl_Historial_Tramites (
     Pk_Id_Historial INT(11) NOT NULL AUTO_INCREMENT,
     Fk_Id_Tramite INT(11) NOT NULL,
@@ -272,6 +276,3 @@ CREATE TABLE IF NOT EXISTS Tbl_Entrega_Pasaporte (
     FOREIGN KEY (Fk_Id_Tramite) REFERENCES Tramite_Pasaporte(PK_id_tramite),
     FOREIGN KEY (Usuario_Entrega) REFERENCES Tbl_UsuariosOficina(Pk_Id_Usuario)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
-
-
